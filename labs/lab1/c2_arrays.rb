@@ -9,64 +9,70 @@
 # Return the first and last elements of an array
 # Expected: first_and_last([1, 2, 3, 4]) => [1, 4]
 def first_and_last(arr)
+  res = []
+  res << arr[0]
+  res << arr[-1]
+  return res
   # TODO: Use array indexing with [0] and [-1]
-  nil
 end
 
 # Exercise 2: Array methods
 # Add an element to the end of an array and return the modified array
 # Expected: add_element([1, 2, 3], 4) => [1, 2, 3, 4]
 def add_element(arr, element)
+  arr << 4
+  return arr
   # TODO: Use .push or << operator (modify and return the array)
-  nil
 end
 
 # Exercise 3: Array iteration
 # Return an array with all numbers doubled
 # Expected: double_numbers([1, 2, 3]) => [2, 4, 6]
 def double_numbers(arr)
+  arr.map{|x| x * 2}
+
   # TODO: Use .map method
-  nil
 end
 
 # Exercise 4: Array filtering
 # Return only even numbers from an array
 # Expected: even_numbers([1, 2, 3, 4, 5, 6]) => [2, 4, 6]
 def even_numbers(arr)
+  arr.select{|x| x% 2 == 0}
   # TODO: Use .select or .filter method
-  nil
 end
 
 # Exercise 5: Array reduction
 # Calculate the sum of all numbers in an array
 # Expected: sum_array([1, 2, 3, 4]) => 10
 def sum_array(arr)
+  arr.sum
   # TODO: Use .sum or .reduce method
-  nil
 end
 
 # Exercise 6: Array operations
 # Check if an array contains a specific element
 # Expected: contains?([:a, :b, :c], :b) => true
 def contains?(arr, element)
+  arr.include?(element)
   # TODO: Use .include? method
-  nil
 end
 
 # Exercise 7: Array sorting
 # Sort an array of numbers in descending order
 # Expected: sort_desc([3, 1, 4, 1, 5]) => [5, 4, 3, 1, 1]
 def sort_desc(arr)
+  arr.sort_by.reverse
   # TODO: Use .sort with .reverse or .sort_by
-  nil
+
 end
 
 # Exercise 8: Array range
 # Create an array of numbers from start to end (inclusive)
 # Expected: number_range(1, 5) => [1, 2, 3, 4, 5]
 def number_range(start, finish)
+  (start..finish).to_a
   # TODO: Use (start..finish).to_a
-  nil
 end
 
 # ============================================

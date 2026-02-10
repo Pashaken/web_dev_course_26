@@ -10,64 +10,66 @@
 # Create a hash with given keys and values, then return the value for a specific key
 # Expected: get_value({ name: "Alice", age: 25 }, :name) => "Alice"
 def get_value(hash, key)
+  hash[key]
   # TODO: Access hash value using hash[key]
-  nil
 end
 
 # Exercise 2: Hash modification
 # Add a new key-value pair to a hash and return it
 # Expected: add_pair({ a: 1 }, :b, 2) => { a: 1, b: 2 }
 def add_pair(hash, key, value)
+  hash[key] = value
+
+  return hash
   # TODO: Add new pair using hash[key] = value
-  nil
 end
 
 # Exercise 3: Hash keys and values
 # Return an array of all keys from a hash
 # Expected: get_keys({ name: "Bob", age: 30, city: "NYC" }) => [:name, :age, :city]
 def get_keys(hash)
+  hash.keys
   # TODO: Use .keys method
-  nil
 end
 
 # Exercise 4: Hash iteration
 # Create a new hash with all values doubled
 # Expected: double_values({ a: 1, b: 2, c: 3 }) => { a: 2, b: 4, c: 6 }
 def double_values(hash)
+  hash.transform_values { |v| v * 2 }
   # TODO: Use .transform_values or .each_with_object
-  nil
 end
 
 # Exercise 5: Hash filtering
 # Return a new hash with only pairs where value is greater than threshold
 # Expected: filter_by_value({ a: 10, b: 5, c: 15 }, 8) => { a: 10, c: 15 }
 def filter_by_value(hash, threshold)
+  hash.select{ |k,v| v>threshold}
   # TODO: Use .select method
-  nil
 end
 
 # Exercise 6: Hash merging
 # Merge two hashes (second hash values overwrite first)
 # Expected: merge_hashes({ a: 1, b: 2 }, { b: 3, c: 4 }) => { a: 1, b: 3, c: 4 }
 def merge_hashes(hash1, hash2)
+  hash1.merge(hash2)
   # TODO: Use .merge method
-  nil
 end
 
 # Exercise 7: Hash existence check
 # Check if a hash has a specific key
 # Expected: has_key?({ name: "Alice", age: 25 }, :name) => true
 def has_key?(hash, key)
+  hash.has_key?(key)
   # TODO: Use .has_key? or .key? method
-  nil
 end
 
 # Exercise 8: Working with nested hashes
 # Access a value from a nested hash
 # Expected: nested_value({ user: { name: "John", age: 30 } }, :user, :name) => "John"
 def nested_value(hash, key1, key2)
+  hash.dig(key1,key2)
   # TODO: Access nested hash using hash[key1][key2] or .dig method
-  nil
 end
 
 # ============================================
