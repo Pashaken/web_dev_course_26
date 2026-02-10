@@ -13,7 +13,8 @@ def check_number(num)
     return "positive"
   elsif num == 0
     return "zero"
-  else return "negative"
+  else 
+    return "negative"
   end
   # TODO: Use if/elsif/else statement
 end
@@ -32,10 +33,8 @@ end
 # Expected: check_access(20) => "access granted"
 # Expected: check_access(15) => "access denied"
 def check_access(age)
-  if age >=18
-    return "access granted"
-  else return "access denied"
-  end
+  return "access denied" unless age >=18
+  "access granted"
   # TODO: Use unless statement (opposite of if)
 end
 
@@ -115,7 +114,8 @@ end
 # Expected: check_size(150) => "big"
 # Expected: check_size(50) => 50
 def check_size(num)
-  return "big" if num>100; return num
+  return "big" if num>100
+  num
   # TODO: Use: return "big" if num > 100; return num
 end
 

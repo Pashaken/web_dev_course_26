@@ -44,7 +44,7 @@ end
 # Return a new hash with only pairs where value is greater than threshold
 # Expected: filter_by_value({ a: 10, b: 5, c: 15 }, 8) => { a: 10, c: 15 }
 def filter_by_value(hash, threshold)
-  hash.select{ |k,v| v>threshold}
+  hash.select{ |_, v| v > threshold}
   # TODO: Use .select method
 end
 
@@ -68,7 +68,7 @@ end
 # Access a value from a nested hash
 # Expected: nested_value({ user: { name: "John", age: 30 } }, :user, :name) => "John"
 def nested_value(hash, key1, key2)
-  hash.dig(key1,key2)
+  hash.dig(key1, key2)
   # TODO: Access nested hash using hash[key1][key2] or .dig method
 end
 

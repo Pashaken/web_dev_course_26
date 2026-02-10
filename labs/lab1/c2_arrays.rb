@@ -9,10 +9,7 @@
 # Return the first and last elements of an array
 # Expected: first_and_last([1, 2, 3, 4]) => [1, 4]
 def first_and_last(arr)
-  res = []
-  res << arr[0]
-  res << arr[-1]
-  return res
+  [arr[0], arr[-1]]
   # TODO: Use array indexing with [0] and [-1]
 end
 
