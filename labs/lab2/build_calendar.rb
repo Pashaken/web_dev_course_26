@@ -7,7 +7,7 @@ require 'date'
 def validARGV
   if ARGV.length != 4
     puts "Error : need 4 arg!"
-    exit
+    abort
   end
 
 end
@@ -17,7 +17,7 @@ end
 def validFile(path)
   unless File.exist?(path)
     puts "Error : path not found!"
-    exit
+    abort
   end
 end
 
@@ -28,12 +28,12 @@ def validDate(first_day,last_day)
     last_day = Date.strptime(last_day,"%d.%m.%Y")
   rescue
     puts "Error : not valid DataType"
-    exit
+    abort
   end
   
   if last_day <= first_day
     puts "Error : firstday > lastday"
-    exit
+    abort
   end
 end
 
@@ -71,7 +71,8 @@ def genMatchTime(first_day,last_day)
   while cur_day <= last_day
     if %w(Friday Saturday Sunday).include?(cur_day.strftime('%A'))
       ["12:00","15:00","18:00"].each do |time|
-        matches<< "#{cur_day.strftime('%d.%m.%Y')} #{time}" 
+        matches<< "#{cur_day.strftime('%d.%m.%Y')} #{time}"
+        matches<< "#{cur_day.strftime('%d.%m.%Y')} #{time}"
       end
     end
     cur_day+=1
