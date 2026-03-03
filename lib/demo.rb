@@ -12,4 +12,4 @@ puts "Результат: #{result}"
 
 puts "Проверка регистра"
 puts "Я -> #{Mygem.translit('Я')}"
-puts "я -> #{Mygem.translit('я')}"
+puts "я. -> #{Mygem.translit('я.')}"
