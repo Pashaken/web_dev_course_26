@@ -6,3 +6,8 @@ source "https://rubygems.org"
 gemspec
 
 gem "rake", "~> 13.0"
+
+group :development do
+  gem "rubocop", require: false
+  gem "rubocop-performance", require: false
+end
