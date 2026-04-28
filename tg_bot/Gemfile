@@ -2,4 +2,4 @@ source 'https://rubygems.org'
 
 gem 'telegram-bot-ruby'
 gem 'rspec'
-gem 'mygem', path: '../web_dev_course_26'
+gem 'mygem', path: '..'

@@ -1,43 +1,38 @@
-# Mygem
+# Telegram Bot + Mygem
 
-TODO: Delete this and the text below, and describe your gem
+## 📌 Описание
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/mygem`. To experiment with that code, run `bin/console` for an interactive prompt.
+Бот для обработки текста с использованием собственного гема `Mygem`.
 
-## Installation
+Поддерживает:
+- 🔤 translit (кириллица → латиница)
+- 🔁 reverse_translit (латиница → кириллица)
+- 🧹 normalize (очистка текста)
 
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
+## 🚀 Запуск
 
-Install the gem and add to the application's Gemfile by executing:
+Бот уже доступен в Telegram:
 
-```bash
-bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-```
+👉 https://t.me/TranscriptRuby_bot
 
-If bundler is not being used to manage dependencies, install the gem by executing:
+Чтобы начать работу:
+/start
 
-```bash
-gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
-```
+Далее выбери режим:
 
-## Usage
+/translit — кириллица → латиница
+/reverse — латиница → кириллица
+/normalize — очистка текста
 
-TODO: Write usage instructions here
+После выбора режима просто отправь текст
 
-## Development
+## 💬 Примеры использования
 
-After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+### translit режим
+![translit](assets/1.png)
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+### reverse режим
+![reverse](assets/2.png)
 
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/mygem. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/mygem/blob/main/CODE_OF_CONDUCT.md).
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the Mygem project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/mygem/blob/main/CODE_OF_CONDUCT.md).
+### normolize режим
+![start](assets/3.png)
