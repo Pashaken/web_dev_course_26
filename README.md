@@ -16,13 +16,13 @@
 👉 https://t.me/TranscriptRuby_bot
 
 Чтобы начать работу:
-/start
+-/start
 
 Далее выбери режим:
 
-/translit — кириллица → латиница
-/reverse — латиница → кириллица
-/normalize — очистка текста
+-/translit — кириллица → латиница
+-/reverse — латиница → кириллица
+-/normalize — очистка текста
 
 После выбора режима просто отправь текст
 
@@ -34,5 +34,5 @@
 ### reverse режим
 ![reverse](assets/2.png)
 
-### normolize режим
+### normalize режим
 ![start](assets/3.png)
