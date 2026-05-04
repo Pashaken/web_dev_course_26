@@ -108,7 +108,19 @@ module Mygem
       .strip
   end
 
+#автопределение
+def self.auto_translit(text)
+  return "" if text.nil?
 
+  cyrillic_count = text.scan(/[а-яё]/i).size
+  latin_count    = text.scan(/[a-z]/i).size
+
+  if cyrillic_count > latin_count
+    translit(text)
+  else
+    reverse_translit(text)
+  end
+end
 
 
 end

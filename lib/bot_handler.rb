@@ -23,7 +23,9 @@ class BotHandler
     when '/normalize'
       @user_mode[chat_id] = :normalize
       return "Режим: normalize выбран"
-
+    when '/auto'
+      @user_mode[chat_id] = :auto
+      return "Режим: auto выбран"
     else
       process_text(chat_id, text)
     end
@@ -39,6 +41,7 @@ class BotHandler
 
       /translit — кириллица → латиница
       /reverse — латиница → кириллица
+      /auto — автоматическое определение языка
       /normalize — очистка текста
     TEXT
   end
@@ -55,6 +58,8 @@ class BotHandler
       Mygem.reverse_translit(text)
     when :normalize
       Mygem.normalize(text)
+    when :auto
+      Mygem.auto_translit(text)
     end
   end
 end
